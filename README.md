@@ -1,48 +1,52 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# OrdenAI
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+OrdenAI es una aplicación de productividad desarrollada con Kotlin Multiplatform, enfocada en la planificación y organización de tareas personales.
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## 🧠 Objetivo del Proyecto
 
-### Build and Run Android Application
+El propósito de este proyecto es construir una arquitectura escalable y multiplataforma utilizando buenas prácticas modernas de desarrollo con Kotlin.
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+El proyecto sigue un flujo de trabajo profesional basado en ramas, commits estructurados y principios de Clean Architecture.
 
-### Build and Run Desktop (JVM) Application
+## 🚀 Stack Tecnológico
 
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
+- Kotlin Multiplatform
+- Compose Multiplatform
+- Koin (Inyección de Dependencias)
+- Ktor (Networking)
+- SQLDelight (Persistencia local multiplataforma)
+- Kotlinx Serialization
+- Coroutines
+- Clean Architecture
+- MVVM
 
-### Build and Run iOS Application
+## 🏗 Arquitectura
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+El proyecto está organizado en capas:
+
+- presentation → UI y ViewModels
+- domain → lógica de negocio
+- data → fuentes de datos y repositorios
+- di → configuración de dependencias
+
+La arquitectura está diseñada para ser escalable, testeable y multiplataforma.
+
+## 🛠 Cómo Ejecutar el Proyecto
+
+1. Clonar el repositorio
+2. Abrir en Android Studio
+3. Sincronizar Gradle
+4. Ejecutar el target Android o Desktop
+
+## 📌 Roadmap
+
+- [ ] Pantalla de planificación
+- [ ] Gestión de estado avanzada
+- [ ] Persistencia local con SQLDelight
+- [ ] Integración de API con Ktor
+- [ ] Target iOS
+- [ ] Mejoras visuales y UX
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+Proyecto desarrollado como parte de un enfoque profesional de aprendizaje en Kotlin Multiplatform.
